@@ -18,7 +18,8 @@ Based on Precitec's real product portfolio:
 - **Framework**: Pure Vue.js 3 with Composition API
 - **Language**: TypeScript
 - **Styling**: SCSS (already configured in your project)
-- **State Management**: Local component state (no Pinia needed for this scope)
+- **State Management**: Pinia for centralized state management
+- **Testing**: Playwright for end-to-end testing
 - **Build Tool**: Vite (already configured)
 
 ## Core Features to Implement
@@ -41,7 +42,8 @@ Based on Precitec's real product portfolio:
 
 - **Component Composition**: Breaking UI into reusable components
 - **Props & Events**: Parent-child component communication
-- **Reactive State**: `ref()`, `reactive()`, `computed()`
+- **Pinia Store**: Centralized state management with stores
+- **Reactive State**: `ref()`, `reactive()`, `computed()` in stores
 - **Conditional Rendering**: `v-if`, `v-show` for different configurations
 - **List Rendering**: `v-for` for product options
 - **Event Handling**: User interactions and state updates
@@ -49,7 +51,7 @@ Based on Precitec's real product portfolio:
 
 ## Project Structure
 
-```
+```text
 src/
 ├── components/
 │   ├── ProductSelector.vue      # Reusable product selection component
@@ -57,6 +59,8 @@ src/
 │   ├── SensorCard.vue           # Sensor system display
 │   ├── ConfigurationSummary.vue # Real-time summary component
 │   └── TechnicalSpecs.vue       # Technical specifications display
+├── stores/
+│   └── configurator.ts          # Pinia store for configuration state
 ├── types/
 │   └── products.ts              # TypeScript interfaces
 ├── data/
@@ -70,13 +74,14 @@ src/
 
 1. **Setup TypeScript interfaces** for products
 2. **Create mock data** for Precitec products
-3. **Build ProductSelector component** with props and events
-4. **Implement individual product cards** (LaserHeadCard, SensorCard)
+3. **Create Pinia store** for configuration state management
+4. **Build ProductSelector component** with props and events
+5. **Implement individual product cards** (LaserHeadCard, SensorCard)
 
 ### Sunday - Integration & Interactivity
 
 1. **Create ConfigurationSummary component** with computed properties
-2. **Implement App.vue** as the main orchestrator
+2. **Implement App.vue** as the main orchestrator with Pinia integration
 3. **Add conditional rendering** for different configurations
 4. **Style with SCSS** for professional appearance
 
@@ -84,8 +89,9 @@ src/
 
 1. **Add responsive design** considerations
 2. **Implement form validation** and compatibility checks
-3. **Write README** with technical explanations
-4. **Prepare for demo** in interview
+3. **Write comprehensive Playwright tests** for E2E coverage
+4. **Write README** with technical explanations
+5. **Prepare for demo** in interview
 
 ## Data Model Preview
 
@@ -118,17 +124,20 @@ interface Configuration {
 ## Interview Talking Points
 
 - **Domain Research**: "I researched Precitec's actual product line to create realistic data"
-- **Vue Fundamentals**: "Focused on core concepts without over-engineering"
+- **Vue Fundamentals**: "Focused on core concepts with modern state management using Pinia"
 - **Component Design**: "Practiced prop validation and event emission patterns"
+- **State Management**: "Implemented centralized state with Pinia stores for better scalability"
 - **TypeScript Integration**: "Used strong typing for better development experience"
+- **Testing Strategy**: "Created comprehensive E2E tests with Playwright for reliability"
 - **Responsive Approach**: "Considered different screen sizes for industrial tablets"
 
 ## Success Metrics
 
 - ✅ Working product configurator by Monday
-- ✅ Clean, readable Vue.js code
+- ✅ Clean, readable Vue.js code with Pinia state management
 - ✅ Demonstrates understanding of core Vue concepts
 - ✅ Shows genuine interest in Precitec's business
+- ✅ Comprehensive Playwright E2E test coverage
 - ✅ Ready to explain technical decisions in interview
 
 ## Next Steps After Interview
@@ -137,6 +146,7 @@ interface Configuration {
 - Implement local storage for configurations
 - Add animation/transitions for better UX
 - Create PDF export for specifications
+- Expand Playwright test suite for edge cases
 
 ---
 
