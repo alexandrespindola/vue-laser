@@ -12,6 +12,7 @@ export interface LaserHead {
 export interface SensorSystem {
   id: string
   name: string
+  description: string
   type: 'monitoring' | 'measurement'
   compatibility: string[]
   features: string[]
@@ -21,6 +22,7 @@ export interface SensorSystem {
 export interface Material {
   id: string
   name: string
+  description: string
   type: 'metal' | 'plastic' | 'composite'
   thickness: number[]
   requiredPower: number

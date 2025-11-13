@@ -38,6 +38,7 @@ export const sensorSystems: SensorSystem[] = [
   {
     id: 'sentry-pro',
     name: 'Sentry Pro',
+    description: 'Advanced monitoring system for real-time process control and quality assurance',
     type: 'monitoring',
     compatibility: ['procutter-20', 'formcutter-6'],
     features: [
@@ -51,6 +52,7 @@ export const sensorSystems: SensorSystem[] = [
   {
     id: 'lpf-scanner',
     name: 'LPF Scanner',
+    description: 'High-precision measurement system for profile analysis and dimensional control',
     type: 'measurement',
     compatibility: ['procutter-20', 'formcutter-6'],
     features: [
@@ -67,6 +69,7 @@ export const materials: Material[] = [
   {
     id: 'steel-carbon',
     name: 'Carbon Steel',
+    description: 'Versatile steel alloy ideal for general industrial cutting applications',
     type: 'metal',
     thickness: [1, 2, 5, 10, 20],
     requiredPower: 2000,
@@ -74,6 +77,7 @@ export const materials: Material[] = [
   {
     id: 'aluminum-6061',
     name: 'Aluminum 6061',
+    description: 'Lightweight aluminum alloy with excellent corrosion resistance',
     type: 'metal',
     thickness: [1, 3, 6, 12],
     requiredPower: 1500,
@@ -81,6 +85,7 @@ export const materials: Material[] = [
   {
     id: 'stainless-steel',
     name: 'Stainless Steel',
+    description: 'High-strength corrosion-resistant steel for demanding applications',
     type: 'metal',
     thickness: [1, 2, 4, 8],
     requiredPower: 2500,
